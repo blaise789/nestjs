@@ -7,7 +7,7 @@ import { ConfigModule } from '@nestjs/config';
 import { StrategyModule } from './strategy/strategy.module';
 
 @Module({
-  imports: [AuthModule, UserModule, BookmarkModule, PrismaModule,ConfigModule.forRoot({isGlobal:true}), StrategyModule],
+  imports: [ConfigModule.forRoot({isGlobal:true}),AuthModule, UserModule, BookmarkModule, PrismaModule, StrategyModule],
   controllers: [],
   providers: [],
 })
